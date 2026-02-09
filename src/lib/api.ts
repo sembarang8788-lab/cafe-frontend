@@ -2,39 +2,9 @@
 // API CLIENT UNTUK NODE.JS BACKEND
 // ========================================
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = 'https://cafe-production-5010.up.railway.app';
 
-// ========================================
-// TYPE DEFINITIONS
-// ========================================
-export interface Product {
-    id: string
-    name: string
-    price: number
-    stock: number
-    category: 'makanan' | 'minuman'
-    image_url?: string | null
-    created_at?: string
-}
-
-export interface Order {
-    id: string
-    user_id?: string | null
-    total_amount: number
-    created_at: string
-    order_items?: OrderItem[]
-    items?: OrderItem[] // Backend returns 'items' instead of 'order_items'
-}
-
-export interface OrderItem {
-    product_id: string
-    quantity: number
-    price: number
-}
-
-export interface CartItem extends Product {
-    qty: number
-}
+import { Product, Order, OrderItem } from "@/types";
 
 // ========================================
 // HELPER FUNCTION
