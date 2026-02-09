@@ -2,7 +2,7 @@
 // API CLIENT UNTUK NODE.JS BACKEND
 // ========================================
 
-const API_BASE_URL = 'https://cafe-production-5010.up.railway.app';
+const API_BASE_URL = 'https://cafe-backend-eight.vercel.app';
 
 import { Product, Order, OrderItem } from "@/types";
 
